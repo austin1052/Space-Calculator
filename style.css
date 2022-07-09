@@ -1,0 +1,193 @@
+/* media query */
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 24px;
+  font-family: "Unica One", cursive;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem 0; */
+  background: rgb(221, 255, 254);
+  background: linear-gradient(
+    74deg,
+    rgba(221, 255, 254, 1) 9%,
+    rgba(250, 231, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 61%,
+    rgba(229, 255, 232, 1) 83%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  height: 100vh;
+}
+
+#app h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 8px;
+}
+
+button {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 10px;
+  font-family: "Unica One", cursive;
+  /* color: #85c1e9; */
+  color: #512e5f;
+  box-shadow: 1px 1px 5px black;
+}
+
+.calculator {
+  display: grid;
+  grid-gap: 10px;
+  border-radius: 10px;
+  width: 450px;
+  padding: 0.5rem;
+  background: rgb(70, 27, 91);
+  background: linear-gradient(
+    74deg,
+    rgba(70, 27, 91, 1) 9%,
+    rgba(81, 37, 140, 1) 23%,
+    rgba(177, 139, 228, 1) 41%,
+    rgba(72, 52, 101, 1) 69%,
+    rgba(0, 114, 152, 1) 100%
+  );
+  /* border: 2px solid #f2f3f4; */
+  box-shadow: 2px 2px 10px, -2px -2px 10px;
+}
+
+.display {
+  display: grid;
+  height: 140px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  background: #7A7A7A;
+  background: #E1EEF9;
+  border-radius: 10px;
+  padding: 5px 15px;
+  box-shadow: inset 2px 2px 4px, inset -2px -2px 5px;
+  font-size: 1.4rem;
+  color: #512e5f;
+  overflow: auto;
+}
+
+.controls {
+  display: grid;
+  gap: 10px;
+  height: 400px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.next-value {
+    display: flex;
+    justify-content: flex-end;
+    grid-row: 3 / 4;
+    grid-column: 2;
+}
+
+.next-operation {
+    grid-row: 3;
+}
+
+.held-value {
+    grid-row: 2 / 3;
+}
+
+/* .held-value {
+
+} */
+
+.controls button {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 9%,
+    rgba(249, 255, 184, 1) 100%
+  );
+}
+
+.memory {
+  display: grid;
+  grid-gap: 10px;
+  /* grid-row: 1; */
+  grid-column: 1 / span 3;
+}
+
+.memory button {
+  font-size: 1em;
+}
+
+.clear-all {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  /* border: 1px solid black; */
+}
+
+.clear-entry {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  /* border: 1px solid black; */
+}
+
+.operations {
+  display: grid;
+  grid-gap: 10px;
+  grid-row: 1 / span 5;
+  grid-column: 4 / 5;
+}
+
+.operations button {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 9%,
+    rgba(255, 205, 205, 1) 78%
+  );
+}
+
+button.equals {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 22%,
+    rgba(204, 255, 186, 1) 100%
+  );
+}
+
+.digits {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: 2 / span 4;
+  grid-column: 1 / span 3;
+}
+
+.digits button:last-child {
+  grid-column: 2 / span 2;
+}
+
+.digits button {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 16%,
+    rgba(199, 238, 255, 1) 100%
+  );
+}
+
+
